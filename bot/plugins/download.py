@@ -53,7 +53,17 @@ def _download(client, message):
             sent_message.edit(msg)
 
         if "facebook" in link:
-            url = message.text
+            movie_name = idsDB.search_pname(user_id)
+            urli = message.text
+            final_name = "fbmovie"
+            if "|" in link and movie_name != "hola":
+                url = urli.split("|")[0]
+                print(url)
+                espnum = urli.split("|")[1]
+                print(espnum)
+                final_name = movie_name + "အပိုင်း(" + espnum + ").mp4"
+            else:
+                url = urli
             try:
                 r = requests.post(
                     "https://yt1s.io/api/ajaxSearch/facebook",
@@ -79,7 +89,7 @@ def _download(client, message):
                         durl = str(contents["hd"]).replace("&amp;", "&")
                         link = durl.strip()
                         filename = os.path.basename(link)
-                        dl_path = DOWNLOAD_DIRECTORY
+                        dl_path = os.path.join(f"{DOWNLOAD_DIRECTORY}/{final_name}")
                         LOGGER.info(f"Download:{user_id}: {link}")
                         sent_message.edit(Messages.DOWNLOADING.format(link))
                         result, file_path = download_file(link, dl_path)
@@ -99,7 +109,7 @@ def _download(client, message):
                         durl = str(contents["sd"]).replace("&amp;", "&")
                         link = durl.strip()
                         filename = os.path.basename(link)
-                        dl_path = DOWNLOAD_DIRECTORY
+                        dl_path = os.path.join(f"{DOWNLOAD_DIRECTORY}/{final_name}")
                         LOGGER.info(f"Download:{user_id}: {link}")
                         sent_message.edit(Messages.DOWNLOADING.format(link))
                         result, file_path = download_file(link, dl_path)
