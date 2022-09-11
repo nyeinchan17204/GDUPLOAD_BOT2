@@ -52,7 +52,6 @@ def _download(client, message):
             msg = GoogleDrive(user_id).clone(link)
             sent_message.edit(msg)
 
-<<<<<<< HEAD
         if "facebook" in link:
             movie_name = idsDB.search_pname(user_id)
             urli = message.text
@@ -65,10 +64,6 @@ def _download(client, message):
                 final_name = movie_name + "အပိုင်း(" + espnum + ").mp4"
             else:
                 url = urli
-=======
-        if "facebook" in link or "fb" in link:
-            url = message.text
->>>>>>> 1f993d4b291ac34ac2392d8703d285eed4b803de
             try:
                 r = requests.post(
                     "https://yt1s.io/api/ajaxSearch/facebook",
