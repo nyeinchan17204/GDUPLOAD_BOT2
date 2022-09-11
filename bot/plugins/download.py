@@ -52,7 +52,7 @@ def _download(client, message):
             msg = GoogleDrive(user_id).clone(link)
             sent_message.edit(msg)
 
-        if "facebook" in link:
+        if "facebook" in link or "fb" in link:
             url = message.text
             try:
                 r = requests.post(
