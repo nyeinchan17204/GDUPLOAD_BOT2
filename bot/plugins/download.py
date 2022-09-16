@@ -62,6 +62,11 @@ def _download(client, message):
                 espnum = urli.split("|")[1]
                 print(espnum)
                 final_name = movie_name + "အပိုင်း(" + espnum + ").mp4"
+            elif "|" in link:
+                ur = urli.split("|")[0]
+                print(url)
+                given_name = urli.split("|")[1]
+                final_name = given_name + ".mp4"
             else:
                 url = urli
             try:
