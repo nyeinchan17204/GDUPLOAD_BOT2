@@ -2,7 +2,7 @@ class config:
     BOT_TOKEN = "5393832294:AAELDE25GQitA2-UfIyUsecndpMYHqtrlB0"
     APP_ID = "7693500"
     API_HASH = "8d82e2ae3917b001afb9a3e2c1ba2ce6"
-    DATABASE_URL = "postgresql://moenya_user:8qa2DTEjwcwDZ5ArkBvIAM3TxwZNzD16@dpg-cdqroi6n6mpqj2ci154g-a/moenya"
+    DATABASE_URL = "postgresql://moenya_user:8qa2DTEjwcwDZ5ArkBvIAM3TxwZNzD16@dpg-cdqroi6n6mpqj2ci154g-a.oregon-postgres.render.com/moenya"
     SUDO_USERS = "1952030175 1317820373 1123928064" # Sepearted by space.
     DOWNLOAD_DIRECTORY = "./downloads/"
     G_DRIVE_CLIENT_ID = "521295385689-82n62fscpdo0jblq8pbapd4243o2l46t.apps.googleusercontent.com"
