@@ -5,8 +5,8 @@ class config:
     DATABASE_URL = "postgresql://moenya_user:8qa2DTEjwcwDZ5ArkBvIAM3TxwZNzD16@dpg-cdqroi6n6mpqj2ci154g-a.oregon-postgres.render.com/moenya"
     SUDO_USERS = "1952030175 1317820373 1123928064" # Sepearted by space.
     DOWNLOAD_DIRECTORY = "./downloads/"
-    G_DRIVE_CLIENT_ID = "521295385689-82n62fscpdo0jblq8pbapd4243o2l46t.apps.googleusercontent.com"
-    G_DRIVE_CLIENT_SECRET = "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"
+    G_DRIVE_CLIENT_ID = "357084951909-2r6q2go7m5tj81bm66g8uql73s47tptd.apps.googleusercontent.com"
+    G_DRIVE_CLIENT_SECRET = "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"
     SUPPORT_CHAT_LINK = "https://t.me/moedyiu"
 
 
